@@ -211,10 +211,9 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Video</h2>
           <video id="paper-video" controls>
-            <source src="./static/videos/compressed_supplemental_video_3_720p.mp4"
-            type="video/mp4">
+            <source src="./static/videos/compressed_supplemental_video_3_720p.mp4" type="video/mp4">
           </video>
-            <!-- <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" frameborder="0"
+          <!-- <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" frameborder="0"
               allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
         </div>
       </div>
@@ -224,81 +223,70 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Method</h2>
-          <p>
-            text
+          <p style="text-align: left;">
+            Overall framework of our method. The critic network
+            estimates the value distribution, and the risk-averse policy is
+            obtained by optimizing the Conditional Value-at- Risk(CVaR) objective. The policy is
+            supposed to perform well under worst-case scenarios.
           </p>
-          <img src="./static/images/overview.png" style="max-width: 100%; max-height: 600px;"/>
+          <br>
+          <img src="./static/images/overview.png" style="max-width: 100%; max-height: 600px;" />
         </div>
       </div>
     </div>
-
-
   </section>
 
 
   <section class="section">
     <div class="container is-max-desktop">
-
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <p style="text-align: left;">
+          We train the policy in Issac Gym simulator and deploy on a real Unitree Aliengo robot. The policy could
+          generalize to scenarios it has never seen before, such as strong push and heavy loads. 
+        </p>
+      </div>
+    </div>
+    
       <div class="columns is-centered">
-
-        <!-- Visual Effects. -->
         <div class="column">
           <div class="content">
-            <h2 class="title is-3">External Push</h2>
-            <p>
-              text
-            </p>
-            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/dollyzoom-stacked.mp4" type="video/mp4">
+            <h3 class="title is-3">External Push</h3>
+            <p>We hit the robot with a 5kg ball and kick it in various directions.</p>
+            <video id="push-video" autoplay controls muted playsinline height="100%">
+              <source src="./static/videos/push.mp4" type="video/mp4">
             </video>
           </div>
         </div>
-        <!--/ Visual Effects. -->
-
-        <!-- Matting. -->
         <div class="column">
-          <h2 class="title is-3">Missing a step</h2>
-          <div class="columns is-centered">
-            <div class="column content">
-              <p>
-                text
-              </p>
-              <video id="matting-video" controls playsinline height="100%">
-                <source src="./static/videos/matting.mp4" type="video/mp4">
+          <div class="content">
+          <h3 class="title is-3">Missing a Step</h3>
+          <p>The robot could recover from missing a step successfully, even when walking down a 30cm hathpace.</p>
+              <video id="terrain-video" autoplay controls muted playsinline height="100%">
+                <source src="./static/videos/terrain.mp4" type="video/mp4">
               </video>
-            </div>
           </div>
         </div>
       </div>
-      <!--/ Matting. -->
-      <div class="columns is-centered">
 
-        <!-- Visual Effects. -->
+      <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h2 class="title is-3">Carrying Loads</h2>
-            <p>
-              text
-            </p>
-            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/dollyzoom-stacked.mp4" type="video/mp4">
+            <h3 class="title is-3">Carrying Loads</h3>
+            <p>The resulted policy is able to carry a 4kg robot arm without any modification of the training process.</p>
+            <video id="loads-video" autoplay controls muted playsinline height="100%">
+              <source src="./static/videos/loads.mp4" type="video/mp4">
             </video>
           </div>
         </div>
-        <!--/ Visual Effects. -->
-
-        <!-- Matting. -->
         <div class="column">
-          <h2 class="title is-3">Wild Terrain</h2>
-          <div class="columns is-centered">
-            <div class="column content">
-              <p>
-                text
-              </p>
-              <video id="matting-video" controls playsinline height="100%">
-                <source src="./static/videos/matting.mp4" type="video/mp4">
-              </video>
-            </div>
+          <div class="content">
+          <h3 class="title is-3">Wild Terrain</h3>
+          <p>We also conducted outdoor experiments. The robot could navigate soil slope and thick vegetation. </p>
+            <video id="wild-video" autoplay controls muted playsinline height="100%">
+              <source src="./static/videos/wild.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
       </div>
@@ -332,7 +320,8 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This website is adapted from<a href="https://github.com/nerfies/nerfies.github.io"> Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              This website is adapted from<a href="https://github.com/nerfies/nerfies.github.io"> Nerfies</a>, licensed
+              under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
                 Commons Attribution-ShareAlike 4.0 International License.</a>
             </p>
           </div>
